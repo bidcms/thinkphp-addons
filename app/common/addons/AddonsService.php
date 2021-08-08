@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace app\service;
+namespace app\common\addons;
 
 use think\Route;
 use think\helper\Str;
@@ -10,7 +10,7 @@ use think\facade\Lang;
 use think\facade\Cache;
 use think\facade\Event;
 use think\Console;
-use app\middleware\Addons;
+use app\common\addons\Middle;
 
 /**
  * 插件服务
@@ -47,7 +47,7 @@ class AddonsService extends \think\Service
             }
 
             // 注册控制器路由
-            $route->rule("addons/:addon/[:controller]/[:action]", $execute)->middleware(Addons::class);
+            $route->rule("addons/:addon/[:controller]/[:action]", $execute)->middleware(Middle::class);
             // 自定义路由
             $routes = (array) Config::get('addons.route', []);
             foreach ($routes as $key => $val) {

@@ -8,7 +8,10 @@ thinkphp6插件扩展
 
 2.复制全部文件到thinkphp根目录
 
-3.运行http://xxx/addons/test/index/bidcms即可
+3.在/config/service.php下增加
+  app/common/addons/AddonsService
+
+4.运行http://xxx/addons/test/index/bidcms即可
 
 注意：
 

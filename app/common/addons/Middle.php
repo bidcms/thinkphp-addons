@@ -20,11 +20,11 @@
  */
 declare(strict_types=1);
 
-namespace app\middleware;
+namespace app\common\addons;
 
 use think\App;
 
-class Addons
+class Middle
 {
     protected $app;
 

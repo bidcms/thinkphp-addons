@@ -58,7 +58,7 @@ class Route
         if (!$info) {
             throw new HttpException(404, lang('addon %s not found', [$addon]));
         }
-        if (!is_file($app->getRootPath() . 'addons/' . $addon . '/on')) {
+        if (!is_file($app->getRootPath() . 'addons/' . $addon . '/install.lock')) {
             throw new HttpException(500, lang('addon %s is disabled', [$addon]));
         }
 
