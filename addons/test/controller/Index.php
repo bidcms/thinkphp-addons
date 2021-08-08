@@ -3,8 +3,8 @@ namespace addons\test\controller;
 
 class Index
 {
-    public function link()
+    public function bidcms()
     {
-        echo 'hello link';
+        echo 'hello bidcms';
     }
 }
